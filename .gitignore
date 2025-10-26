@@ -18,4 +18,5 @@ pnpm-debug.log*
 !.env.example
 .env
 project-map.txt
+.github/
 

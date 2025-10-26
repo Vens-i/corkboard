@@ -6,7 +6,7 @@ import {
 } from '@supabase/ssr';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '$env/static/private';
 import type { RequestEvent, Cookies } from '@sveltejs/kit';
-import type { CookieSerializeOptions } from 'cookie';
+import type { SerializeOptions } from 'cookie';
 
 type SupabaseCookieMethods = CookieMethodsServer &
 	CookieMethodsServerDeprecated & {
@@ -15,11 +15,11 @@ type SupabaseCookieMethods = CookieMethodsServer &
 
 type CookieList = ReturnType<Cookies['getAll']>;
 
-const withDefaultPath = (options?: CookieOptions): CookieSerializeOptions & { path: string } =>
+const withDefaultPath = (options?: CookieOptions): SerializeOptions & { path: string } =>
 	({
 		path: '/',
 		...(options ?? {})
-	} as CookieSerializeOptions & { path: string });
+	} as SerializeOptions & { path: string });
 
 const mapCookies = (cookies: CookieList) =>
 	cookies.map(({ name, value }) => ({ name, value }));

@@ -56,16 +56,22 @@
 
 <form on:submit|preventDefault={onSubmit} class="max-w-lg space-y-3">
 	<div>
-		<label class="block text-sm mb-1">Title</label>
-		<input bind:value={title} required class="w-full border rounded p-2" />
+		<label class="block text-sm mb-1" for="create-post-title">Title</label>
+		<input id="create-post-title" bind:value={title} required class="w-full border rounded p-2" />
 	</div>
 	<div>
-		<label class="block text-sm mb-1">Description</label>
-		<textarea bind:value={description} rows="4" class="w-full border rounded p-2"></textarea>
+		<label class="block text-sm mb-1" for="create-post-description">Description</label>
+		<textarea
+			id="create-post-description"
+			bind:value={description}
+			rows="4"
+			class="w-full border rounded p-2"
+		></textarea>
 	</div>
 	<div>
-		<label class="block text-sm mb-1">Image</label>
+		<label class="block text-sm mb-1" for="create-post-image">Image</label>
 		<input
+			id="create-post-image"
 			type="file"
 			accept="image/*"
 			on:change={(e: any) => (file = e.currentTarget.files?.[0] ?? null)}
