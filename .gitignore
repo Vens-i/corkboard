@@ -16,3 +16,6 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+.env
+project-map.txt
+

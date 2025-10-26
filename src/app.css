@@ -1,1 +1,22 @@
 @import 'tailwindcss';
+
+/* corkboard custom theme */
+@theme {
+	/* Fonts */
+	--font-sans: 'Inter', sans-serif;
+	--font-display: 'Nunito Sans', sans-serif;
+
+	/* Colors */
+	--color-cork-bg: #cf9766;
+	--color-cork-border: #efcda4;
+
+	--color-sticky-red: #ffafa3;
+	--color-sticky-gray: #afbccf;
+	--color-sticky-blue: #80caff;
+	--color-sticky-green: #85e0a3;
+	--color-sticky-orange: #ffc470;
+	--color-sticky-purple: #d9b8ff;
+	--color-sticky-light-gray: #e6e6e6;
+	--color-text-yellow: #ffd966;
+	--color-text-pink: #ffa8db;
+}
